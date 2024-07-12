@@ -12,6 +12,7 @@ movies = soup.find_all(name="h3", class_="listicleItem_listicle-item__title__Bfe
 movie_titles = []
 
 for movie in movies:
+    # insert the movie titles in the start of the list - to reverse the order they are currently in
     movie_titles.insert(0, movie.getText())
 
 with open("100 greatest movies.txt", mode="w") as file:
